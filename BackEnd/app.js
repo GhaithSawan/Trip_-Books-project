@@ -1,6 +1,7 @@
 let express = require("express")
 let app = express()
 let cors = require("cors")
+require("dotenv").config()
 let ConnectToDB = require("./ConnectToDB")
 ConnectToDB()
 app.use(cors());
