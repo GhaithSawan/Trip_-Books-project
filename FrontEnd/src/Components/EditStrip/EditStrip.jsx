@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import "./EditStrip.css"
 import axios from 'axios';
 import { URLaxios } from '../../../constant';
-const EditStrip = ({ show, setShow ,singleStripDate}) => {
+const EditStrip = ({ show, setShow ,singleStripDate ,reloud,setreloud}) => {
 
     const [name, setname] = useState()
     const [Destination, setDestination] = useState()
@@ -19,6 +19,9 @@ const EditStrip = ({ show, setShow ,singleStripDate}) => {
             "Rate": Rate
         }).then((res) => {
             console.log(res);
+            handleClose()
+            setreloud(!reloud)
+
         })
             .catch((error) => {
                 if (error.response) {

@@ -14,15 +14,13 @@ const Booking = () => {
     ))
   );
 
-  const [Destination, setDestination] = useState("maxico")
-  const [Check_Out, setCheck_Out] = useState("2024-06-15")
-  const [Check_In, setCheck_In] = useState("2024-06-11")
+  const [Destination, setDestination] = useState("dubai")
+  const [Check_Out, setCheck_Out] = useState("2024-07-13")
+  const [Check_In, setCheck_In] = useState("2024-06-13")
 
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
-
-
     if (Check_In && Check_Out && Destination) {
       handelSearch()
       setShow(true)
@@ -55,7 +53,9 @@ const Booking = () => {
   function handelSearch() {
     axios.get(`${URLaxios}/StripRouts/GetAllStrips?Destination=${Destination}`).then((res) => {
       setStrips(res.data);
-      console.log(res.data);
+      console.log(res);
+    }).catch((e)=>{
+      console.log(e);
     })
   }
 
@@ -68,13 +68,13 @@ const Booking = () => {
         <div className="flex  flex-col w-full ">
           <label
             htmlFor="Destination"
-            className=" text-lg font-bold text-gray-700"
+            className=" text-lg font-bold text-gray-700  "
           >
             Destination
           </label>
           <select
             id="Destination"
-            className=" text-lg  bg-black/10 p-1 text-gray-700"
+            className=" text-lg  bg-black/10 p-1 text-gray-700   border-0 "
             onChange={(e) => { setDestination(e.target.value) }}
             value={Destination}
           >
@@ -83,7 +83,7 @@ const Booking = () => {
             {
               uniqueDestinations?.map((e) => {
                 return (<>
-                  <option value={e?.Destination}>{e?.Destination}</option>
+                  <option>{e?.Destination}</option>
                 </>
                 )
               })

@@ -87,7 +87,7 @@ const StripsList = () => {
                     </tbody>
                 </Table>
             </div>
-            <EditStrip show={show} setShow={setShow} singleStripDate={singleStripDate}  />
+            <EditStrip show={show} setShow={setShow} singleStripDate={singleStripDate} reloud={reloud} setreloud={setreloud}  />
         </div>
     )
 }

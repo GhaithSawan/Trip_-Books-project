@@ -6,8 +6,6 @@ import axios from 'axios';
 import { URLaxios } from '../../constant';
 
 const StripsModel = ({ show, setShow, Strips ,Destination ,Check_In,Check_Out}) => {
-    
-   
     const handleClose = () => setShow(false);
     return (
         <div className=' w-100'>

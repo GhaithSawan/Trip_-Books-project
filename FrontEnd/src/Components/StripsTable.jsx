@@ -23,6 +23,10 @@ function StripsTable({ Strips, Check_In, Check_Out }) {
           Strips?.map((e, index) => {
             const createdAt = new Date(e?.createdAt).toISOString().split("T")[0]
             const expiresAt = new Date(e?.expiresAt).toISOString().split("T")[0]
+            console.log(createdAt);
+            console.log(expiresAt);
+            console.log(checkInDate);
+            console.log(checkOutDate);
             if (createdAt == checkInDate && expiresAt == checkOutDate ) {
               return (
                 <tr>

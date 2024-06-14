@@ -10,7 +10,11 @@ const NavBar = () => {
     <div className=" relative flex items-center bg-black/90 text-white px-3 py-2  justify-between">
       {/* ul li href  */}
       <ul className="hidden  sm:flex items-center ">
-
+        <Link to={"/"}>
+          <li>
+            HomePage
+          </li>
+        </Link>
         <li>
           <a href="#Deals">Deals</a>
         </li>
