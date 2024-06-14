@@ -1,4 +1,4 @@
-export let  URLaxios = "http://localhost:3000"
+export let URLaxios = "https://trip-books-project.onrender.com"
 
 // const [Destination, setDestination] = useState("Maldive")
 // const [Check_Out, setCheck_Out] = useState()
@@ -12,21 +12,6 @@ export let  URLaxios = "http://localhost:3000"
 //     "Rate": 1
 //   })
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // //import axios from "axios";
 // import React, { useEffect, useState } from "react";
@@ -87,7 +72,7 @@ export let  URLaxios = "http://localhost:3000"
 //         return createdAt >= checkInDate && expiresAt <= checkOutDate;
 //       })
 //         setStrips(filteredData);
-//       console.log(filteredData); 
+//       console.log(filteredData);
 //     })
 //   }
 
